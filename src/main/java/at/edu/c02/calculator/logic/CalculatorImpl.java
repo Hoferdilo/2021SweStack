@@ -8,7 +8,7 @@ import at.edu.c02.calculator.CalculatorException;
 
 public class CalculatorImpl implements Calculator {
 
-	private Stack<Double> stack_ = new Stack<Double>();
+	private Stack<Double> stack_ = new Stack<>();
 
 	@Override
 	public double perform(Operation op) throws CalculatorException {
@@ -29,6 +29,8 @@ public class CalculatorImpl implements Calculator {
 			return c;
 		case mul:
 			return a * b;
+		case mod:
+			return a % b;
 		}
 		return 0;
 	}
